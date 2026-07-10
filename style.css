@@ -78,12 +78,12 @@ nav ul li a:hover{
     align-items:center;
     text-align:center;
     background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600");
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600");
     background-size:cover;
     background-position:center;
-    padding-top:90px;
-}
+    background-attachment:scroll; /* أضف هذا السطر */
+} 
 
 .hero h1{
     font-size:70px;
@@ -124,7 +124,11 @@ h2{
 }
 
 /* Menu */
-
+.menu{
+    background:#1b120d;
+    position:relative;
+    z-index:2;
+}
 .menu-category{
     background:#2a1a12;
     border-radius:18px;
