@@ -1,88 +1,65 @@
-// تغيير لون شريط التنقل عند النزول
+// ===========================
+// BONO Cafe - script.js
+// ===========================
 
-window.addEventListener("scroll", function () {
+// تغيير لون الهيدر عند التمرير
+const header = document.querySelector("header");
 
-    const header = document.querySelector("header");
-
-    if (window.scrollY > 50) {
-        header.style.background = "#1b120d";
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 80) {
+        header.style.background = "#2b1b13";
+        header.style.boxShadow = "0 5px 20px rgba(0,0,0,.25)";
     } else {
-        header.style.background = "rgba(0,0,0,.55)";
+        header.style.background = "rgba(32,20,14,.85)";
+        header.style.boxShadow = "none";
     }
-
 });
 
-
-// تأثير ظهور الأقسام عند التمرير
-
-const sections = document.querySelectorAll("section");
-
+// ظهور العناصر عند التمرير
 const observer = new IntersectionObserver((entries) => {
-
     entries.forEach(entry => {
-
         if (entry.isIntersecting) {
             entry.target.style.opacity = "1";
             entry.target.style.transform = "translateY(0)";
         }
+    });
+},{
+    threshold:0.15
+});
+
+document.querySelectorAll(".card,.photo,.about,.contact").forEach(el=>{
+    el.style.opacity="0";
+    el.style.transform="translateY(40px)";
+    el.style.transition=".8s ease";
+    observer.observe(el);
+});
+
+// تمرير سلس للقائمة
+document.querySelectorAll('nav a').forEach(link=>{
+
+    link.addEventListener('click',function(e){
+
+        e.preventDefault();
+
+        const target=document.querySelector(this.getAttribute("href"));
+
+        target.scrollIntoView({
+            behavior:"smooth"
+        });
 
     });
 
-}, {
-    threshold: 0.2
 });
 
-sections.forEach(section => {
+// تأثير بسيط على الزر
+const btn=document.querySelector(".btn");
 
-    section.style.opacity = "0";
-    section.style.transform = "translateY(60px)";
-    section.style.transition = "0.8s";
-
-    observer.observe(section);
-
+btn.addEventListener("mouseenter",()=>{
+    btn.style.transform="scale(1.05)";
 });
 
-
-// تأثير الضغط على زر View Menu
-
-const button = document.querySelector(".btn");
-
-button.addEventListener("mouseenter", () => {
-
-    button.style.transform = "scale(1.05)";
-
+btn.addEventListener("mouseleave",()=>{
+    btn.style.transform="scale(1)";
 });
 
-button.addEventListener("mouseleave", () => {
-
-    button.style.transform = "scale(1)";
-// زر الرجوع للأعلى
-
-const topBtn = document.getElementById("topBtn");
-
-window.onscroll = function(){
-
-if(document.body.scrollTop>200 || document.documentElement.scrollTop>200){
-
-topBtn.style.display="block";
-
-}else{
-
-topBtn.style.display="none";
-
-}
-
-}
-
-function topFunction(){
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-}
-});
+console.log("BONO Cafe Ready ☕");
