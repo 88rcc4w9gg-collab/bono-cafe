@@ -243,12 +243,18 @@ margin-bottom:20px;
 color:#8B5A2B;
 
 }
+.card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
 .card img{
     width:100%;
     height:220px;
+    display:block;
     object-fit:cover;
-    border-radius:15px;
-    margin-bottom:20px;
 }
 .item{
 
