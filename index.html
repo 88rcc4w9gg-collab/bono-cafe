@@ -1,111 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BONO Café</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BONO Cafe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
-
-<nav>
-
-<div class="logo">
-  <img src="139d2dcb-785c-46d4-8226-c1ae27c06373.jpeg" alt="BONO Logo">
-
+    <nav>
+        <div class="logo">
+            <img src="139d2dcb-785c-46d4-8226-c1ae27c06373.jpeg" alt="BONO Logo">
             <span>BONO</span>
-</div>
+        </div>
 
-<ul>
-
-<li><a href="#">Home</a></li>
-<li><a href="#menu">Menu</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-<div class="hero">
-
-<h1>Every Cup Has a Story</h1>
-
-<p>Premium Coffee Experience</p>
-
-<a href="#menu" class="btn">View Menu</a>
-
-</div>
-
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
-<section id="menu">
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Every Cup Has a Story</h1>
+        <p>Premium Coffee Experience</p>
+
+        <a href="#menu" class="btn">
+            View Menu
+        </a>
+    </div>
+</section>
+
+<section id="menu" class="menu">
 
 <h2>Our Menu</h2>
 
-<div class="cards">
+<div class="menu-category">
 
-<div class="card">
-<h3>Hot Coffee</h3>
-<p>Espresso ..........70 EGP</p>
-<p>Americano.......75 EGP</p>
-<p>Cappuccino.....95 EGP</p>
-<p>Latte...............100 EGP</p>
+<h3>☕ Hot Coffee</h3>
+
+<div class="item">
+<span>Espresso</span>
+<span>70 EGP</span>
 </div>
 
-<div class="card">
-<h3>Iced Coffee</h3>
-<p>Iced Latte.......110 EGP</p>
-<p>Spanish Latte..120 EGP</p>
+<div class="item">
+<span>Americano</span>
+<span>75 EGP</span>
 </div>
 
-<div class="card">
-<h3>Mojito</h3>
-<p>Lemon Mint....85 EGP</p>
-<p>Blue Mojito.....90 EGP</p>
+<div class="item">
+<span>Cappuccino</span>
+<span>95 EGP</span>
 </div>
 
-<div class="card">
-<h3>Desserts</h3>
-<p>Cheesecake....120 EGP</p>
-<p>Brownie..........95 EGP</p>
+<div class="item">
+<span>Latte</span>
+<span>100 EGP</span>
+</div>
+
+</div>
+
+<div class="menu-category">
+
+<h3>🧊 Iced Coffee</h3>
+
+<div class="item">
+<span>Iced Latte</span>
+<span>110 EGP</span>
+</div>
+
+<div class="item">
+<span>Spanish Latte</span>
+<span>120 EGP</span>
+</div>
+
+</div>
+
+<div class="menu-category">
+
+<h3>🥤 Mojito</h3>
+
+<div class="item">
+<span>Lemon Mint</span>
+<span>85 EGP</span>
+</div>
+
+<div class="item">
+<span>Blue Mojito</span>
+<span>90 EGP</span>
+</div>
+
+</div>
+
+<div class="menu-category">
+
+<h3>🍰 Desserts</h3>
+
+<div class="item">
+<span>Cheesecake</span>
+<span>120 EGP</span>
+</div>
+
+<div class="item">
+<span>Brownie</span>
+<span>95 EGP</span>
 </div>
 
 </div>
 
 </section>
 
-<section id="about">
+<section id="about" class="about">
 
 <h2>About BONO</h2>
 
 <p>
-
-BONO Café serves premium coffee crafted with passion, offering a warm atmosphere and unforgettable taste.
-
+At BONO Cafe we believe every cup tells a story.
+Enjoy premium coffee, refreshing drinks and delicious desserts in a cozy atmosphere.
 </p>
 
 </section>
 
-<footer id="contact">
+<section id="contact" class="contact">
 
 <h2>Contact Us</h2>
 
-<p>📞 01000000000</p>
-
 <p>📍 Egypt</p>
 
-<p>© BONO Café</p>
+<p>☕ BONO Cafe</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 BONO Cafe. All Rights Reserved.</p>
 
 </footer>
 
-</body>
+<script src="script.js"></script>
 
+</body>
 </html>
